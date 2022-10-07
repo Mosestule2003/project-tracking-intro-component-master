@@ -1,0 +1,183 @@
+
+/* font  */
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@100;200;300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@100;300;400&display=swap');
+/* font  End*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Barlow', sans-serif;
+    text-decoration: none;
+    list-style: none;
+    outline: none;
+}
+
+/* custom styles */
+:root{
+    --primary-color: hsl(0, 100%, 68%);
+
+    --neutral-color-one: hsl(230, 29%, 20%);
+    --neutral-color-two: hsl(230, 11%, 40%);
+    --neutral-color-three: hsl(231, 7%, 65%);
+    --neutral-color-four: hsl(207, 33%, 95%);
+
+    --body-font-size: 18px;
+}
+
+/* custom styles End*/
+
+body{
+    overflow-x: hidden;
+}
+
+main{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: minmax(100vh, auto);
+}
+
+.bg-grid-item:last-child span{
+    display: inline-block;
+    width: 100%;
+    height: 60%;
+    background-color: hsl(0, 0%, 95%);
+    border-bottom-left-radius: 100px;
+}
+
+/* page-container */
+
+    .navigation-bar{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        position: absolute;
+        padding-top: 3em;
+        padding-left: 8em;
+        padding-right: 8em;
+        font-family: 'Barlow', sans-serif;
+        font-weight: 700;
+    }
+
+    .navigation-right ul{
+        display: flex;
+        align-items: center;
+        gap: 3em;
+    }
+
+    .navigation-right ul li{
+        font-size: var(--body-font-size);
+    }
+
+    .navigation-right ul li a{
+        color: var(--neutral-color-one);
+    }
+
+    .navigation-right ul li:last-child a{
+        color: var(--neutral-color-two);
+    }
+
+    .navigation-right ul li:last-child a:hover{
+        text-decoration: underline;
+    }
+
+    .navigation-right ul li span{
+        display: inline-block;
+        display: flex;
+        height: 5px;
+        width: 5px;
+        border-radius: 50%;
+        background-color: var(--neutral-color-three);
+    }
+
+    .page-container .grid-container{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        position: absolute;
+        top: 40%;
+        padding-left: 8em;
+        padding-right: 8em;
+        padding-bottom: 8em;
+        width: 100%;
+    }
+
+    .page-container .grid-item{
+        display: flex;
+        align-items: center;
+        justify-content: start;
+        position: relative;
+    }
+
+    .page-container .pre-header{
+        display: flex;
+        align-items: center;
+        gap: 1.2em;
+        text-transform: uppercase;
+        margin-bottom: 1.5em;
+    }
+
+    .page-container .pre-header span{
+        padding: 0.3em 0.8em;
+        border-radius: 50px;
+        color: var(--neutral-color-four);
+        background-color: var(--neutral-color-one);
+    }
+
+    .page-container .pre-header p{
+        font-size: var(--body-font-size);
+        font-weight: lighter;
+        letter-spacing: 3px;
+        color: var(--neutral-color-three);
+    }
+
+    .page-container .header h1{
+        font-size: 2.8em;
+        text-transform: uppercase;
+        color: var(--neutral-color-one);
+        margin-bottom: 0.6em;
+    }
+
+    .page-container .header p{
+        color: var(--neutral-color-three);
+        font-size: var(--body-font-size);
+        line-height: 28px;
+    }
+
+    .page-container .header span{
+        display: block;
+    }
+
+    .image{
+        position: absolute;
+        height: 420px;
+        right: -400px;
+        top: -50px;
+    }
+
+    .page-container .button-container{
+        display: flex;
+        align-items: center;
+        gap: 1.5em;
+        margin-top: 5em;
+    }
+
+    .page-container button{
+        border-radius: 5px;
+        border: none;
+        padding: 1em 2.8em;
+        font-size: var(--body-font-size);
+        cursor: pointer;
+        background-color: var(--primary-color);
+        transition: all .3s ease;
+    }
+
+    .page-container button:hover{
+        transform: scale(1.1);
+    }
+
+    .page-container button a{
+        color: var(--neutral-color-four);
+    }
+/* page-container End*/
